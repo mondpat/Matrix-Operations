@@ -58,12 +58,7 @@ class Matrix {
 
 	int NumberOfDigits(int number)
 	{
-		string strNumber = to_string(number);
-		if (number < 0)
-		{
-			return strNumber.length() - 1;
-		}
-		return strNumber.length();
+		return (number < 0) ? to_string(number).length() - 1 : to_string(number).length();
 	}
 
 	/// <summary>
@@ -141,7 +136,7 @@ public:
 	{
 		vector<int> negativeIndexes = GetVectorOfHorizontalIndexesWithNegativeNumberIn2DVector();
 		vector<vector<int>> multipleDigitIndexes = GetVectorOfIndexesOfMultipleDigitsFrom2DVector();
-		int tempIndex = 0, indexWithLargeNumber = 0;
+		int indexWithLargeNumber = 0;
 
 		for (int i = 0; i < numbers.size(); i++)
 		{
@@ -442,6 +437,7 @@ void DisplayMenu()
 	}
 	cout << "\nDo you want to run the program again? (y/n)" << endl;
 }
+
 int main()
 {
 	char runAgain;
