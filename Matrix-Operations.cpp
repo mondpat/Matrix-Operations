@@ -141,7 +141,7 @@ public:
 	{
 		vector<int> negativeIndexes = GetVectorOfHorizontalIndexesWithNegativeNumberIn2DVector();
 		vector<vector<int>> multipleDigitIndexes = GetVectorOfIndexesOfMultipleDigitsFrom2DVector();
-		int tempIndex = 0, indexWithLargeNumber = 0;
+		int indexWithLargeNumber = 0;
 
 		for (int i = 0; i < numbers.size(); i++)
 		{
