@@ -73,7 +73,7 @@ class Matrix {
 	/// <returns></returns>
 	int FindLargestElementIn2DVector(vector<vector<int>> vect, int firstRowIndex)
 	{
-		int largestNumber =  0, indexWitLargestNumber = 0;
+		int largestNumber = 0, indexWitLargestNumber = 0;
 		for (int i = 0; i < vect[0].size(); i++)
 		{
 			if (vect[0][i] == firstRowIndex)
@@ -267,7 +267,7 @@ bool IsStringNumber(string str)
 {
 	for (int i = 0; i < str.length(); i++)
 	{
-		if (!isdigit(str[i]))
+		if (!isdigit(str[i]) && str[i] != '-')
 		{
 			return false;
 		}
@@ -324,7 +324,7 @@ void AddRowTo2DVector(vector<vector<int>>& vector2D, string str)
 	}
 	for (int i = 0; i < str.length(); i++)
 	{
-		if (isalnum(str[i]))
+		if (isalnum(str[i]) || str[i] == '-')
 		{
 			rowNumber += str[i];
 		}
