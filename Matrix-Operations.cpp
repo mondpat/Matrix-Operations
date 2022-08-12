@@ -13,7 +13,7 @@ class Matrix {
 	vector<vector<int>> numbers;
 
 	/// <summary>
-	/// Return vector of indexes where are negative numbers in 2d vector of matrixes numbers (used for formatted matrix print)
+	/// Return vector of indexes of negative numbers from columns of 2d vector of matrixes numbers (used for formatted matrix print)
 	/// </summary>
 	/// <param name="column"></param>
 	/// <returns></returns>
