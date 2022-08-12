@@ -1,4 +1,0 @@
-﻿  Matrix-Operations.cpp
-D:\c#\Matrix-Operations\Matrix-Operations\Matrix-Operations.cpp(64,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-D:\c#\Matrix-Operations\Matrix-Operations\Matrix-Operations.cpp(66,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  Matrix-Operations.vcxproj -> D:\c#\Matrix-Operations\x64\Debug\Matrix-Operations.exe
