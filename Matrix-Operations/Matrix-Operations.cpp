@@ -13,20 +13,22 @@ class Matrix {
 	vector<vector<int>> numbers;
 
 	/// <summary>
-	/// Return vector of indexes of negative numbers from columns of 2d vector of matrixes numbers (used for formatted matrix print)
+	/// Return 2d vector of indexes of negative numbers from columns of 2d vector of matrixes numbers and its values in second row (used for formatted matrix print)
 	/// </summary>
 	/// <param name="column"></param>
 	/// <returns></returns>
-	vector<int> GetVectorOfHorizontalIndexesWithNegativeNumberIn2DVector()
+	vector<vector<int>> Get2DVectorOfHorizontalIndexesAndItsValuesWithNegativeNumberIn2DVector()
 	{
-		vector<int> negativeIndexes;
+		vector<vector<int>> negativeIndexes;
+		negativeIndexes.resize(2);
 		for (int i = 0; i < numbers.size(); i++)
 		{
 			for (int j = 0; j < numbers[i].size(); j++)
 			{
 				if (numbers[i][j] < 0)
 				{
-					negativeIndexes.push_back(j);
+					negativeIndexes[0].push_back(j);
+					negativeIndexes[1].push_back(numbers[i][j]);
 				}
 			}
 		}
@@ -134,7 +136,7 @@ public:
 
 	void Print()
 	{
-		vector<int> negativeIndexes = GetVectorOfHorizontalIndexesWithNegativeNumberIn2DVector();
+		vector<vector<int>> negativeIndexes = Get2DVectorOfHorizontalIndexesAndItsValuesWithNegativeNumberIn2DVector();
 		vector<vector<int>> multipleDigitIndexes = GetVectorOfIndexesOfMultipleDigitsFrom2DVector();
 		int indexWithLargeNumber = 0;
 
@@ -142,14 +144,14 @@ public:
 		{
 			for (int j = 0; j < numbers[i].size(); j++)
 			{
-				if (count(negativeIndexes.begin(), negativeIndexes.end(), j) && numbers[i][j] >= 0)
+				if (count(negativeIndexes[0].begin(), negativeIndexes[0].end(), j) && numbers[i][j] >= 0 && to_string(FindLargestElementIn2DVector(negativeIndexes, j)).length() > to_string(numbers[i][j]).length())
 				{
 					cout << " ";
 				}
 				if (count(multipleDigitIndexes[0].begin(), multipleDigitIndexes[0].end(), j))
 				{
 					indexWithLargeNumber = FindLargestElementIn2DVector(multipleDigitIndexes, j);
-					for (int k = NumberOfDigits(numbers[i][j]); k < multipleDigitIndexes[1][indexWithLargeNumber]; k++)
+					for (int k = to_string(numbers[i][j]).length(); k < multipleDigitIndexes[1][indexWithLargeNumber]; k++)
 					{
 						cout << " ";
 					}
