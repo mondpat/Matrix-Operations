@@ -7,7 +7,7 @@ Program se skládá ze třídy Matice, jejich metod pro sečtení/odečtení/vyn
 
 sečtení a odečtení dvou matic:
 
-![image](https://user-images.githubusercontent.com/108635114/184347816-d2f65513-24da-4dd3-83b3-f9e5e514541f.png)
+![image](https://user-images.githubusercontent.com/108635114/184431197-f740e2fa-b7d4-47b2-bf8f-d340e50c4ed9.png)
 
 vynásobení matic:
 
