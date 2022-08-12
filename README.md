@@ -9,6 +9,10 @@ sečtení a odečtení dvou matic:
 
 ![image](https://user-images.githubusercontent.com/108635114/184347816-d2f65513-24da-4dd3-83b3-f9e5e514541f.png)
 
+vynásobení matic:
+
+![image](https://user-images.githubusercontent.com/108635114/184351064-5056a10d-dce9-484e-ab90-959399912c8d.png)
+
 transpozice matice:
 
 ![image](https://user-images.githubusercontent.com/108635114/184348093-15f7b948-64f6-4d85-b950-907e66f79280.png)
