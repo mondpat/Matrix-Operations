@@ -19,4 +19,4 @@ transpozice matice:
 
 vynásobení matice číslem:
 
-![image](https://user-images.githubusercontent.com/108635114/184350352-c6a6c141-9774-4b60-9d83-a379a80daf62.png)
+![image](https://user-images.githubusercontent.com/108635114/184453003-143804bf-8fb5-4408-9443-8b6851cf295b.png)
