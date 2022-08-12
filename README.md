@@ -7,12 +7,12 @@ Program se skládá ze třídy Matice, jejich metod pro sečtení/odečtení/vyn
 
 sečtení a odečtení dvou matic:
 
-![image](https://user-images.githubusercontent.com/108635114/184345824-b47636df-3e4c-40a5-9da4-cbcc0d1a46f0.png)
+![image](https://user-images.githubusercontent.com/108635114/184347816-d2f65513-24da-4dd3-83b3-f9e5e514541f.png)
 
 transpozice matice:
 
-![image](https://user-images.githubusercontent.com/108635114/184345993-b302136b-3a99-4f60-a53e-5b388175acb7.png)
+![image](https://user-images.githubusercontent.com/108635114/184348093-15f7b948-64f6-4d85-b950-907e66f79280.png)
 
 vynásobení matice číslem:
 
-![image](https://user-images.githubusercontent.com/108635114/184346372-f6dadae0-c156-4404-ac0a-0fc4f7883e36.png)
+![image](https://user-images.githubusercontent.com/108635114/184350352-c6a6c141-9774-4b60-9d83-a379a80daf62.png)
