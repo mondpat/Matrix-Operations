@@ -5,18 +5,18 @@ Program se skládá ze třídy Matice, jejich metod pro sečtení/odečtení/vyn
 
 ## Ukázka programu:
 
-sečtení a odečtení dvou matic:
+### sečtení a odečtení dvou matic:
 
 ![image](https://user-images.githubusercontent.com/108635114/184516544-fb9ad3d4-eb49-478b-95ca-b4c757a46e63.png)
 
-vynásobení matic:
+### vynásobení matic:
 
 ![image](https://user-images.githubusercontent.com/108635114/184351064-5056a10d-dce9-484e-ab90-959399912c8d.png)
 
-transpozice matice:
+### transpozice matice:
 
 ![image](https://user-images.githubusercontent.com/108635114/184348093-15f7b948-64f6-4d85-b950-907e66f79280.png)
 
-vynásobení matice číslem:
+### vynásobení matice číslem:
 
 ![image](https://user-images.githubusercontent.com/108635114/184453003-143804bf-8fb5-4408-9443-8b6851cf295b.png)
