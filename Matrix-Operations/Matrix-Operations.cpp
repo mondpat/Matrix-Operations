@@ -32,11 +32,6 @@ class Matrix {
 		return lengthOfNumbers;
 	}
 
-	int NumberOfDigits(int number)
-	{
-		return (number < 0) ? to_string(number).length() - 1 : to_string(number).length();
-	}
-
 public:
 
 	Matrix() { }
