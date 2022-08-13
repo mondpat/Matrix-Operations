@@ -12,77 +12,29 @@ class Matrix {
 	/// </summary>
 	vector<vector<int>> numbers;
 
-	/// <summary>
-	/// Return 2d vector of indexes of negative numbers from columns of 2d vector of matrixes numbers and its values in second row (used for formatted matrix print)
-	/// </summary>
-	/// <param name="column"></param>
-	/// <returns></returns>
-	vector<vector<int>> Get2DVectorOfHorizontalIndexesAndItsValuesWithNegativeNumberIn2DVector()
+	vector<int> GetVectorOfLongestNumbersOfEachColumnFrom2DVector()
 	{
-		vector<vector<int>> negativeIndexes;
-		negativeIndexes.resize(2);
-		for (int i = 0; i < numbers.size(); i++)
-		{
-			for (int j = 0; j < numbers[i].size(); j++)
-			{
-				if (numbers[i][j] < 0)
-				{
-					negativeIndexes[0].push_back(j);
-					negativeIndexes[1].push_back(numbers[i][j]);
-				}
-			}
-		}
-		return negativeIndexes;
-	}
+		vector<int> lengthOfNumbers;
+		int lengthofLongestNumber = 0;
 
-	/// <summary>
-	/// Return 2d vector of horizontal indexes and number of digits of the biggest number from a column in 2d vector of matrixes numbers (indexes are stored in the first row and number of digits in the second row)
-	/// </summary>
-	/// <param name="nums"></param>
-	/// <returns></returns>
-	vector<vector<int>> GetVectorOfIndexesOfMultipleDigitsFrom2DVector()
-	{
-		vector<vector<int>> multipleDigits;
-		multipleDigits.resize(2);
-		for (int i = 0; i < numbers.size(); i++)
+		for (int i = 0; i < numbers[0].size(); i++)
 		{
-			for (int j = 0; j < numbers[i].size(); j++)
+			for (int j = 0; j < numbers.size(); j++)
 			{
-				if (numbers[i][j] > 9 || numbers[i][j] < -9)
+				if (to_string(numbers[j][i]).length() > lengthofLongestNumber)
 				{
-					multipleDigits[0].push_back(j);
-					multipleDigits[1].push_back(NumberOfDigits(numbers[i][j]));
+					lengthofLongestNumber = to_string(numbers[j][i]).length();
 				}
 			}
+			lengthOfNumbers.push_back(lengthofLongestNumber);
+			lengthofLongestNumber = 0;
 		}
-		return multipleDigits;
+		return lengthOfNumbers;
 	}
 
 	int NumberOfDigits(int number)
 	{
 		return (number < 0) ? to_string(number).length() - 1 : to_string(number).length();
-	}
-
-	/// <summary>
-	/// Return index of the largest number from second row depending on the first row 
-	/// </summary>
-	/// <param name="vect"></param>
-	/// <returns></returns>
-	int FindLargestElementIn2DVector(vector<vector<int>> vect, int firstRowIndex)
-	{
-		int largestNumber = 0, indexWitLargestNumber = 0;
-		for (int i = 0; i < vect[0].size(); i++)
-		{
-			if (vect[0][i] == firstRowIndex)
-			{
-				if (vect[1][i] > largestNumber)
-				{
-					largestNumber = vect[1][i];
-					indexWitLargestNumber = i;
-				}
-			}
-		}
-		return indexWitLargestNumber;
 	}
 
 public:
@@ -125,25 +77,15 @@ public:
 
 	void Print()
 	{
-		vector<vector<int>> negativeIndexes = Get2DVectorOfHorizontalIndexesAndItsValuesWithNegativeNumberIn2DVector();
-		vector<vector<int>> multipleDigitIndexes = GetVectorOfIndexesOfMultipleDigitsFrom2DVector();
-		int indexWithLargeNumber = 0;
+		vector<int> longestNumbers = GetVectorOfLongestNumbersOfEachColumnFrom2DVector();
 
 		for (int i = 0; i < numbers.size(); i++)
 		{
 			for (int j = 0; j < numbers[i].size(); j++)
 			{
-				if (count(negativeIndexes[0].begin(), negativeIndexes[0].end(), j) && numbers[i][j] >= 0 && to_string(FindLargestElementIn2DVector(negativeIndexes, j)).length() > to_string(numbers[i][j]).length())
+				for (int k = to_string(numbers[i][j]).length(); k < longestNumbers[j]; k++)
 				{
 					cout << " ";
-				}
-				if (count(multipleDigitIndexes[0].begin(), multipleDigitIndexes[0].end(), j))
-				{
-					indexWithLargeNumber = FindLargestElementIn2DVector(multipleDigitIndexes, j);
-					for (int k = to_string(numbers[i][j]).length(); k < multipleDigitIndexes[1][indexWithLargeNumber]; k++)
-					{
-						cout << " ";
-					}
 				}
 				cout << numbers[i][j] << " ";
 			}
