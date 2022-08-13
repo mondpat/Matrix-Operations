@@ -109,14 +109,7 @@ public:
 	/// <returns></returns>
 	static bool AreMatricesValidForAdditionAndSubtraction(Matrix firstMatrix, Matrix secondMatrix)
 	{
-		if (firstMatrix.numbers.size() == secondMatrix.numbers.size())
-		{
-			if (firstMatrix.numbers[0].size() == secondMatrix.numbers[0].size())
-			{
-				return true;
-			}
-		}
-		return false;
+		return (firstMatrix.numbers.size() == secondMatrix.numbers.size() && firstMatrix.numbers[0].size() == secondMatrix.numbers[0].size()) ? true : false;
 	}
 
 	/// <summary>
@@ -127,11 +120,7 @@ public:
 	/// <returns></returns>
 	static bool AreMatricesValidForMultiplication(Matrix firstMatrix, Matrix secondMatrix)
 	{
-		if (firstMatrix.numbers[0].size() == secondMatrix.numbers.size())
-		{
-			return true;
-		}
-		return false;
+		return (firstMatrix.numbers[0].size() == secondMatrix.numbers.size()) ? true : false;
 	}
 
 	void Print()
