@@ -209,6 +209,14 @@ void CountOfNumbersInString(string str, int& count)
 	bool isNumberInString = false;
 	for (int i = 0; i < str.length(); i++)
 	{
+		if (isalpha(str[i]))
+		{
+			isNumberInString = false;
+			while (str[i] != ' ' && str[i] != '\n')
+			{
+				i++;
+			}
+		}
 		if (isalnum(str[i]))
 		{
 			if (isdigit(str[i]))
