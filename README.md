@@ -27,6 +27,6 @@ Program se skládá ze třídy Matice, jejich metod pro sečtení/odečtení/vyn
 
 ![image](https://user-images.githubusercontent.com/108635114/184453003-143804bf-8fb5-4408-9443-8b6851cf295b.png)
 
-### handling error in input
+### handling mistakes in input
 
 ![image](https://user-images.githubusercontent.com/108635114/192162742-405c8276-4d9c-494a-bbdd-4261ca12b377.png)
