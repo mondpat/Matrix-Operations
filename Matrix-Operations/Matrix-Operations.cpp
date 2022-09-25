@@ -212,7 +212,7 @@ void CountOfNumbersInString(string str, int& count)
 		if (isalpha(str[i]))
 		{
 			isNumberInString = false;
-			while (str[i] != ' ' && str[i] != '\n')
+			while (str[i] != ' ' && i < str.length())
 			{
 				i++;
 			}
